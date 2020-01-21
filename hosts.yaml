@@ -1,2 +1,9 @@
-[env]
-stage.acirrustech.com
+---
+all:
+  children:
+    env:
+      hosts:
+        dev:
+        qa:
+        stage:
+        prod:

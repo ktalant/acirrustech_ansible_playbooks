@@ -1,6 +1,6 @@
 ---
 - name: onboarding users
-  hosts: all
+  hosts: "{{ hosts }}"
   become: yes
   become_method: sudo
   tasks:
@@ -11,3 +11,8 @@
         owner: centos
         group: centos
         mode: 0600
+
+    - name: install package
+      package:
+        name: "{{ list }}"
+        state: installed

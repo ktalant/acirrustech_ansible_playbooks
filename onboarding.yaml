@@ -1,0 +1,12 @@
+---
+- name: onboarding users
+  hosts: all
+  become: yes
+  become_method: sudo
+  tasks:
+    - name: create a test file
+      file:
+        path: /tmp/acirrustech.test
+        owner: centos
+        group: centos
+        mode: 0600

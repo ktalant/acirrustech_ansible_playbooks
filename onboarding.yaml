@@ -7,6 +7,7 @@
     - name: create a test file
       file:
         path: /tmp/acirrustech.test
+        state: touch
         owner: centos
         group: centos
         mode: 0600
